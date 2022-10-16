@@ -1,6 +1,48 @@
 function App() {
   return (
     <div className="wrapper">
+
+      <div className="overlay">
+        <div className="drawer">
+          <h2 className="mb-30">Корзина</h2>
+          <div className="items">
+            <div className="cartItem d-flex align-center mb-20">
+              <img className="mr-20" width={70} height={70} src="/img/sneakers/1.jpg" alt="Sneakers"/>
+              <div className="mr-20">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>15 199 руб.</b>
+              </div>
+              <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+            </div>
+            <div className="cartItem d-flex align-center mb-20">
+              <img className="mr-20" width={70} height={70} src="/img/sneakers/1.jpg" alt="Sneakers"/>
+              <div className="mr-20">
+                <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                <b>15 199 руб.</b>
+              </div>
+              <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
+            </div>
+          </div>
+          <ul className="d-flex">
+            <li>
+              <span>Итого:</span>
+              <div></div>
+              <b>21 498 руб.</b>
+            </li>
+            <li>
+              <span>Нолог 5%</span>
+              <div></div>
+              <b>1074 руб.</b>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+
+
+
+
       <header className="d-flex justify-between align-center p-40">
         <div className="d-flex align-center">
           <img width={40} height={40} src="/img/logo.png" alt="logo" />
@@ -20,10 +62,18 @@ function App() {
         </ul>
       </header>
       <div className="content p-40">
-        <h1 className="mb-40">Все кроссовки</h1>
-
+        <div className="d-flex mb-40 align-center justify-between">
+          <h1>Все кроссовки</h1>
+          <div className="search-block">
+            <img src="/img/search.svg" alt="Search" />
+            <input placeholder="Поиск..."></input>
+          </div>
+        </div>
         <div className="card-row">
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-unliked.svg" alt="Unliked" />
+            </div>
             <img className="card_image" width={133} height={112} src="/img/sneakers/1.jpg" alt="Sneakers" />
             <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
             <div className="d-flex justify-between align-center">
@@ -37,6 +87,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-unliked.svg" alt="Unliked" />
+            </div>
             <img className="card_image" width={133} height={112} src="/img/sneakers/2.jpg" alt="Sneakers" />
             <h5>Мужские Кроссовки Nike Air Max 270</h5>
             <div className="d-flex justify-between align-center">
@@ -50,6 +103,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-unliked.svg" alt="Unliked" />
+            </div>
             <img className="card_image" width={133} height={112} src="/img/sneakers/3.jpg" alt="Sneakers" />
             <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
             <div className="d-flex justify-between align-center">
@@ -63,6 +119,9 @@ function App() {
             </div>
           </div>
           <div className="card">
+            <div className="favorite">
+              <img src="/img/heart-unliked.svg" alt="Unliked" />
+            </div>
             <img className="card_image" width={133} height={112} src="/img/sneakers/4.jpg" alt="Sneakers" />
             <h5>Кроссовки Puma X Aka Boku Future Rider</h5>
             <div className="d-flex justify-between align-center">
