@@ -175,11 +175,17 @@ header {
   }
 }
 
+.items {
+  min-height: 680px;
+}
+
 .cartTotalBlock {
   ul {
+    margin-bottom: 40px !important;
     li {
       display: flex;
       align-items: flex-end;
+      margin-bottom: 15px;
     }
   
     div {
@@ -192,14 +198,43 @@ header {
     }
   }
 
-  button {
-    width: 100%;
-    height: 55px;
-    box-sizing: border-box;
-    border: none;
-    color: #fff;
+  .greenButton {
+    position: relative;
 
-    background: #9DD558;
-    border-radius: 18px;
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      transition: transform 0.1s ease-in-out;
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  box-sizing: border-box;
+  border: none;
+  color: #fff;
+
+  background: #9DD558;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+
+  &:hover {
+    background: lighten($color: #9DD558, $amount: 5%)
+  }
+
+  &:active {
+    background: darken($color: #9DD558, $amount: 5%)
   }
 }
