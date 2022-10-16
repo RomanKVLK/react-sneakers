@@ -176,7 +176,9 @@ header {
 }
 
 .items {
-  min-height: 680px;
+  // min-height: 680px;
+  overflow: auto;
+  flex: 1;
 }
 
 .cartTotalBlock {
