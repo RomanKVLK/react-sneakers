@@ -23,19 +23,21 @@ function App() {
               <img className="removeBtn" src="/img/btn-remove.svg" alt="Remove"/>
             </div>
           </div>
-          <ul className="d-flex">
-            <li>
-              <span>Итого:</span>
-              <div></div>
-              <b>21 498 руб.</b>
-            </li>
-            <li>
-              <span>Нолог 5%</span>
-              <div></div>
-              <b>1074 руб.</b>
-            </li>
-          </ul>
-
+          <div className="cartTotalBlock">
+            <ul>
+              <li className="d-flex">
+                <span>Итого:</span>
+                <div></div>
+                <b>21 498 руб.</b>
+              </li>
+              <li className="d-flex">
+                <span>Нолог 5%</span>
+                <div></div>
+                <b>1074 руб.</b>
+              </li>
+            </ul>
+            <button>Оформить заказ</button>
+          </div>
         </div>
       </div>
 

@@ -19,6 +19,11 @@ body {
   list-style-type: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 
 header {
   border-bottom: 1px solid #eaeaea;
@@ -140,6 +145,9 @@ header {
   background: #FFFFFF;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .cartItem {
@@ -165,6 +173,33 @@ header {
       opacity: 1;
     }
   }
+}
 
+.cartTotalBlock {
+  ul {
+    li {
+      display: flex;
+      align-items: flex-end;
+    }
+  
+    div {
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #dfdfdf;
+      position: relative;
+      top: -4px;
+      margin: 0 7px;
+    }
+  }
 
+  button {
+    width: 100%;
+    height: 55px;
+    box-sizing: border-box;
+    border: none;
+    color: #fff;
+
+    background: #9DD558;
+    border-radius: 18px;
+  }
 }
