@@ -6,6 +6,7 @@ import Drawer from './components/Drawer/Drawer';
 
 function App() {
   const [items, setItems] = React.useState([]);
+  const [cartItems, setCartItems] = React.useState([]);
   const [cartOpened, setCartOpened] = React.useState(false);
 
   React.useEffect(() => {
@@ -16,9 +17,13 @@ function App() {
     });
   }, []);
 
+  const onAddToCart = (obj) => {
+    setCartItems(prev => [...prev, obj])
+  }
+
   return (
     <div className="wrapper">
-      {cartOpened && <Drawer onClose={() => setCartOpened(false)}/>}
+      {cartOpened && <Drawer items={cartItems} onClose={() => setCartOpened(false)}/>}
       <Header onClickCart={() => setCartOpened(true)} />
       <div className="content p-40">
         <div className="d-flex mb-40 align-center justify-between">
@@ -29,13 +34,14 @@ function App() {
           </div>
         </div>
         <div className="card-row">
-            {items.map((obj) => (
-            <Card 
-              title={obj.title}
-              price={obj.price}
-              imageUrl={obj.imageUrl}
-              onClickFavorite={() => console.log('Добавили в закладки')}
-              onClickPlus={() => console.log('Добавили в корзину')} />
+            {items.map((item, index) => (
+            <Card
+              key={index} 
+              title={item.title}
+              price={item.price}
+              imageUrl={item.imageUrl}
+              onFavorite={() => console.log('Добавили в закладки')}
+              onPlus={onAddToCart} />
             ))}
         </div>
       </div>
