@@ -12,11 +12,11 @@ function App() {
   const [cartOpened, setCartOpened] = React.useState(false);
 
   React.useEffect(() => {
-    // fetch('https://635eb78303d2d4d47af4dab0.mockapi.io/items').then(res => {
-    //   return res.json();
-    // }).then(json => {
-    //   setItems(json);
-    // });
+    fetch('https://635eb78303d2d4d47af4dab0.mockapi.io/items').then(res => {
+      return res.json();
+    }).then(json => {
+      setItems(json);
+    });
 
     axios.get('https://635eb78303d2d4d47af4dab0.mockapi.io/items').then(res => setItems(res.data));
     axios.get('https://635eb78303d2d4d47af4dab0.mockapi.io/cart').then(res => setCartItems(res.data))
