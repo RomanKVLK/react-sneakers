@@ -33,6 +33,11 @@ function App() {
     setCartItems((prev) => [...prev, obj]);
   };
 
+  const onAddToFavorites = (obj) => {
+    axios.post('https://635eb78303d2d4d47af4dab0.mockapi.io/cart', obj);
+    setCartItems((prev) => [...prev, obj]);
+  };
+
   const onRemoveItem = (id) => {
     axios.delete(`https://635eb78303d2d4d47af4dab0.mockapi.io/cart/${id}`);
     setCartItems((prev) => prev.filter((item) => item.id !== id));

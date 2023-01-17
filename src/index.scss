@@ -144,6 +144,25 @@ header {
   }
 }
 
+.greenButton {
+  width: 245px;
+  margin-top: 20px;
+
+  &:hover {
+    img {
+      transform: translateX(3px);
+    }
+  }
+
+  img {
+    position: relative;
+    top: 1px;
+    transform: rotate(180deg);
+    margin-right: 15px;
+    transition: transform 0.15s ease-in-out;
+  }
+}
+
 .clear {
   width: 18px;
   height: 18px;
